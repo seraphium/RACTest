@@ -19,7 +19,11 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         
-        textField.rac_textSignal().subscribeNext { text in
+        textField.rac_textSignal().map { text -> AnyObject! in
+            return text.lengthOfBytesUsingEncoding(NSUTF8StringEncoding)
+        }.filter { length -> Bool in
+             length as! Int > 3
+        }.subscribeNext { text in
             print (text)
         }
     }
