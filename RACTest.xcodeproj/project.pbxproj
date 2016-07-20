@@ -12,21 +12,21 @@
 		4B822FB21D3FB78400C47A5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B822FB01D3FB78400C47A5C /* Main.storyboard */; };
 		4B822FB41D3FB78400C47A5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B822FB31D3FB78400C47A5C /* Assets.xcassets */; };
 		4B822FB71D3FB78400C47A5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B822FB51D3FB78400C47A5C /* LaunchScreen.storyboard */; };
-		4BE4498D1D3FC28D00F69FDE /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BE4498B1D3FC28D00F69FDE /* Result.framework */; };
-		4BE4498E1D3FC2A800F69FDE /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BE4498A1D3FC28D00F69FDE /* ReactiveCocoa.framework */; };
-		4BE4498F1D3FC2A800F69FDE /* ReactiveCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4BE4498A1D3FC28D00F69FDE /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		4BE449911D3FC2A800F69FDE /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4BE4498B1D3FC28D00F69FDE /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4BE449961D3FC5D500F69FDE /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BE449921D3FC5AD00F69FDE /* ReactiveCocoa.framework */; };
+		4BE449971D3FC5D500F69FDE /* ReactiveCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4BE449921D3FC5AD00F69FDE /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4BE449991D3FC5D600F69FDE /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BE449931D3FC5AD00F69FDE /* Result.framework */; };
+		4BE4499A1D3FC5D600F69FDE /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4BE449931D3FC5AD00F69FDE /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		4B822FD01D3FBE0200C47A5C /* Embed Frameworks */ = {
+		4BE449981D3FC5D500F69FDE /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				4BE4498F1D3FC2A800F69FDE /* ReactiveCocoa.framework in Embed Frameworks */,
-				4BE449911D3FC2A800F69FDE /* Result.framework in Embed Frameworks */,
+				4BE449971D3FC5D500F69FDE /* ReactiveCocoa.framework in Embed Frameworks */,
+				4BE4499A1D3FC5D600F69FDE /* Result.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -41,8 +41,8 @@
 		4B822FB31D3FB78400C47A5C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B822FB61D3FB78400C47A5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4B822FB81D3FB78400C47A5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4BE4498A1D3FC28D00F69FDE /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ReactiveCocoa.framework; sourceTree = "<group>"; };
-		4BE4498B1D3FC28D00F69FDE /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Result.framework; sourceTree = "<group>"; };
+		4BE449921D3FC5AD00F69FDE /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Frameworks/ReactiveCocoa.framework; sourceTree = "<group>"; };
+		4BE449931D3FC5AD00F69FDE /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Frameworks/Result.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,8 +50,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4BE4498E1D3FC2A800F69FDE /* ReactiveCocoa.framework in Frameworks */,
-				4BE4498D1D3FC28D00F69FDE /* Result.framework in Frameworks */,
+				4BE449961D3FC5D500F69FDE /* ReactiveCocoa.framework in Frameworks */,
+				4BE449991D3FC5D600F69FDE /* Result.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,8 +91,8 @@
 		4B822FBE1D3FBC9100C47A5C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4BE4498A1D3FC28D00F69FDE /* ReactiveCocoa.framework */,
-				4BE4498B1D3FC28D00F69FDE /* Result.framework */,
+				4BE449921D3FC5AD00F69FDE /* ReactiveCocoa.framework */,
+				4BE449931D3FC5AD00F69FDE /* Result.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -107,7 +107,7 @@
 				4B822FA51D3FB78300C47A5C /* Sources */,
 				4B822FA61D3FB78300C47A5C /* Frameworks */,
 				4B822FA71D3FB78300C47A5C /* Resources */,
-				4B822FD01D3FBE0200C47A5C /* Embed Frameworks */,
+				4BE449981D3FC5D500F69FDE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -288,6 +288,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = RACTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -303,6 +304,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = RACTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
