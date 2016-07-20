@@ -7,12 +7,21 @@
 //
 
 import UIKit
+import ReactiveCocoa
 
 class ViewController: UIViewController {
 
+    @IBOutlet var textField: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        
+        textField.rac_textSignal().subscribeNext { text in
+            print (text)
+        }
     }
 
     override func didReceiveMemoryWarning() {
