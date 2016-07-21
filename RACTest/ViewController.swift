@@ -14,15 +14,19 @@ class ViewController: UIViewController {
 
     @IBOutlet var textField: UITextField!
     
-    var textValue : MutableProperty<String>!
+    var textValue : String! {
+        didSet {
+            print ("\(textValue)")
+        }
+    }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        textValue = MutableProperty<String>("text")
+        textValue = "test"
         
-        let textSignal = textField.rac_textSignal()
+     /*   let textSignal = textField.rac_textSignal()
         textSignal.map { text -> AnyObject! in
             return text.lengthOfBytesUsingEncoding(NSUTF8StringEncoding)
         }.filter { length -> Bool in
@@ -39,15 +43,22 @@ class ViewController: UIViewController {
             }
             
         }
-      
+    
         textValue <~ textSignal.toSignalProducer().map { ($0 as? String) ?? ""}.flatMapError {
             _ in SignalProducer<String, NoError>.empty
         }
-        
+ 
         textValue.producer.startWithNext { text in
             print ("textvalue put \(text)")
         }
-
+        */
+        let textFieldChannel = textField.rac_newTextChannel()
+        
+        let textValueChannel =
+            RACKVOChannel(target: self, keyPath: "textValue", nilValue: "")["followingTerminal"]
+        textFieldChannel.subscribe(textValueChannel)
+        textValueChannel.subscribe(textFieldChannel)
+        
     
     }
 
